@@ -2,8 +2,8 @@
 
 <!-- Animated Header GIF -->
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjg4OTM4em5xb3FqZGo1b2I5NmliMnNkaW1obHlrZ283d2JlNW95ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HscDLzkO8EOTmgkhQP/giphy.gif" width="50%" alt="Welcome Banner"width="50%" alt="Welcome Banner" />
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGdremZrcXo3cXM1MTE1MnNueW1wdjNuM3RhbDF4Yml2YXdpMWU0MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YYW0hHizzIOrlhimPG/giphy.gif"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjg4OTM4em5xb3FqZGo1b2I5NmliMnNkaW1obHlrZ283d2JlNW95ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HscDLzkO8EOTmgkhQP/giphy.gif"width="40%" alt="Welcome Banner"width="50%" alt="Welcome Banner" />
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGdremZrcXo3cXM1MTE1MnNueW1wdjNuM3RhbDF4Yml2YXdpMWU0MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YYW0hHizzIOrlhimPG/giphy.gif"width="40%" alt="Welcome Banner"width="50%" alt="Welcome Banner"/>
 </p>
 
 <h1 align="center">Hi 👋, I'm Your Name</h1>
