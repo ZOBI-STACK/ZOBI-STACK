@@ -56,7 +56,7 @@
 
 ### 🔥 Featured Projects
 
-- 🧠 [Project Name](https://github.com/ZOBI-STACK/project-name): Brief description of what it does.
+- 🧠 [BuzzLink](https://github.com/ZOBI-STACK/BuzzLink): Brief description of what it does.
 - 🌐 [Another Project](https://github.com/ZOBI-STACK/project-name): Another cool thing you built.
 - ➕ [More on my repos →](https://github.com/ZOBI-STACK?tab=repositories)
 
