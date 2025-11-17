@@ -16,7 +16,7 @@
 
 ### 🙋‍♂️ About Me
 
-- 🔭 I’m currently working on **CILAN.PK**
+- 🔭 I’m currently working on **QUADNEX TECNOLOGYS**
 - 🌱 I’m currently learning **C++**
 - 💬 Ask me about **Web Dev,SMM,**
 - 📫 How to reach me: **mzohaibinam923719@gmail.com**
