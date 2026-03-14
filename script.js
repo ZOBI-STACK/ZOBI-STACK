@@ -187,21 +187,6 @@ function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? '#10b981' : '#ef4444'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        z-index: 10000;
-        animation: slideIn 0.3s ease;
-        max-width: 300px;
-    `;
 
     document.body.appendChild(notification);
 
@@ -268,17 +253,7 @@ let cursorCircle = null;
 // Create cursor circle
 if (window.innerWidth > 768) {
     cursorCircle = document.createElement('div');
-    cursorCircle.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: rgba(99, 102, 241, 0.3);
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.2s ease;
-        display: none;
-    `;
+    cursorCircle.className = 'custom-cursor';
     document.body.appendChild(cursorCircle);
 
     document.addEventListener('mousemove', (e) => {
@@ -286,7 +261,7 @@ if (window.innerWidth > 768) {
         mouseY = e.clientY;
         
         if (cursorCircle) {
-            cursorCircle.style.display = 'block';
+            cursorCircle.classList.add('active');
             cursorCircle.style.left = mouseX - 10 + 'px';
             cursorCircle.style.top = mouseY - 10 + 'px';
         }
@@ -298,13 +273,13 @@ if (window.innerWidth > 768) {
     clickableElements.forEach(element => {
         element.addEventListener('mouseenter', () => {
             if (cursorCircle) {
-                cursorCircle.style.transform = 'scale(2)';
+                cursorCircle.classList.add('scaled');
             }
         });
         
         element.addEventListener('mouseleave', () => {
             if (cursorCircle) {
-                cursorCircle.style.transform = 'scale(1)';
+                cursorCircle.classList.remove('scaled');
             }
         });
     });
