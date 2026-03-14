@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearElement = document.querySelector('.footer-bottom p');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
-        yearElement.innerHTML = yearElement.innerHTML.replace('2026', currentYear);
+        yearElement.textContent = `© ${currentYear} Quadnex Technologies. All rights reserved.`;
     }
 
     // Initialize all animations and interactions
