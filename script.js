@@ -391,7 +391,7 @@ if ('IntersectionObserver' in window) {
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
-    const yearElement = document.querySelector('.footer-bottom p');
+    const yearElement = document.getElementById('footer-copyright');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
         yearElement.textContent = `© ${currentYear} Quadnex Technologies. All rights reserved.`;
