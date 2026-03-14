@@ -96,17 +96,14 @@ const revealElements = document.querySelectorAll('.service-card, .portfolio-item
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('revealed');
             revealObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.1 });
 
 revealElements.forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(30px)';
-    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    element.classList.add('scroll-reveal');
     revealObserver.observe(element);
 });
 
@@ -192,7 +189,7 @@ function showNotification(message, type = 'success') {
 
     // Remove notification after 3 seconds
     setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease';
+        notification.classList.add('slide-out');
         setTimeout(() => notification.remove(), 300);
     }, 3000);
 }
@@ -235,19 +232,8 @@ window.addEventListener('load', () => {
 });
 
 // ===================================
-// Add Floating Animation to Service Icons
-// ===================================
-const serviceIcons = document.querySelectorAll('.service-icon');
-
-serviceIcons.forEach((icon, index) => {
-    icon.style.animation = `float 3s ease-in-out ${index * 0.2}s infinite`;
-});
-
-// ===================================
 // Cursor Trail Effect (Optional Enhancement)
 // ===================================
-let mouseX = 0;
-let mouseY = 0;
 let cursorCircle = null;
 
 // Create cursor circle
@@ -257,13 +243,10 @@ if (window.innerWidth > 768) {
     document.body.appendChild(cursorCircle);
 
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
         if (cursorCircle) {
             cursorCircle.classList.add('active');
-            cursorCircle.style.left = mouseX - 10 + 'px';
-            cursorCircle.style.top = mouseY - 10 + 'px';
+            document.documentElement.style.setProperty('--cursor-x', `${e.clientX - 10}px`);
+            document.documentElement.style.setProperty('--cursor-y', `${e.clientY - 10}px`);
         }
     });
 
