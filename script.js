@@ -94,12 +94,10 @@ statNumbers.forEach(stat => {
 const revealElements = document.querySelectorAll('.service-card, .portfolio-item, .team-member, .about-content, .about-image, .contact-info, .contact-form-wrapper');
 
 const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
             revealObserver.unobserve(entry.target);
         }
     });
@@ -205,35 +203,6 @@ function showNotification(message, type = 'success') {
         max-width: 300px;
     `;
 
-    // Add animation keyframes if not already added
-    if (!document.querySelector('#notification-styles')) {
-        const style = document.createElement('style');
-        style.id = 'notification-styles';
-        style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(400px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-            @keyframes slideOut {
-                from {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateX(400px);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
     document.body.appendChild(notification);
 
     // Remove notification after 3 seconds
@@ -288,23 +257,6 @@ const serviceIcons = document.querySelectorAll('.service-icon');
 serviceIcons.forEach((icon, index) => {
     icon.style.animation = `float 3s ease-in-out ${index * 0.2}s infinite`;
 });
-
-// Add float animation to styles
-if (!document.querySelector('#float-animation')) {
-    const style = document.createElement('style');
-    style.id = 'float-animation';
-    style.textContent = `
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-}
 
 // ===================================
 // Cursor Trail Effect (Optional Enhancement)
